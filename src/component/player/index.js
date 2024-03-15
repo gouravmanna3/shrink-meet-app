@@ -8,13 +8,10 @@ const Player = (props) => {
       setHasWindow(true);
     }
   }, []);
-  const { playerId, url, muted, playing } = props;
+  const { url, muted, playing } = props;
   return (
     <div>
-      Hello
-      {hasWindow && (
-        <ReactPlayer key={playerId} url={url} muted={muted} playing={playing} />
-      )}
+      {hasWindow && <ReactPlayer url={url} muted={muted} playing={playing} />}
     </div>
   );
 };
