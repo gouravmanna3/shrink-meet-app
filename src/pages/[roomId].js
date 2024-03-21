@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { useSocket } from "@/content/socket";
 import { useMediaStream } from "@/hooks/useMediaStream";
 import usePeer from "@/hooks/usePeer";
-import Player from "@/component/player";
-import Bottom from "@/component/Bottom";
+import Player from "@/components/player";
+import Bottom from "@/components/Bottom";
 import usePlayer from "@/hooks/usePlayer";
 
 import styles from "@/styles/room.module.css";
 import { useRouter } from "next/router";
 import { cloneDeep } from "lodash";
-import CopySection from "@/component/copySection";
+import CopySection from "@/components/copySection";
 
 const Room = () => {
   const socket = useSocket();
