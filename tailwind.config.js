@@ -17,6 +17,9 @@ module.exports = {
         secondary: "#343a40",
         buttonPrimary: "#d90429",
       },
+      fontFamily: {
+        sans: ["var(--font-roboto_slab)"],
+      },
     },
   },
   plugins: [],
