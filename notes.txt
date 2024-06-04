@@ -1,0 +1,19 @@
+user 1 creates a room
+user 2 joins the room
+user 1 gets notified that some user (user 2) has joined the room
+user 1 calls the joined user (user 2)
+user 2 receives the calls
+user 2 accepts the call and sends his stream
+user 1 acccepts and displays user 2 stream on his screen
+
+
+- inside usePeer.js where peer id got created its the best place to join the room
+- get the room id from router params
+- socket?.emit("join-room", roomId, id); // id is the peerId
+
+api/socket.js
+
+- once user joins a room it should broadcast to other users in the room
+that he has joined the room
+- socket.broadcast.to(roomId).emit("user-connected", userId);
+- above line broadcast to everyone except the user who broadcasted
